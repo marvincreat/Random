@@ -5,12 +5,14 @@ import Splash from './Splash';
 
 import home from './home';
 import NavBar from './NavBar';
+import customKey from './customKey';
 
 export default {
-  path: '/',
-  component: NavBar,
-  childRoutes: [
-    Splash,
-    home,
-  ].map(v => v.routeConfig || v),
+    path: '/',
+    component: NavBar,
+    childRoutes: [
+        Splash,
+        home,
+        customKey
+    ].map(v => v.routeConfig || v),
 };
