@@ -70,6 +70,7 @@ export default class Home extends Component {
     _end = () => {
         nameMobx.endRandomChangeName();
     };
+
 }
 
 const styles = StyleSheet.create({
@@ -96,6 +97,7 @@ const styles = StyleSheet.create({
         alignItems: 'center',
         marginVertical: 10,
         marginHorizontal: 10,
+
     }
 });
 

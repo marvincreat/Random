@@ -90,7 +90,11 @@ class NameMobx {
         let Range = Max - Min;
         let Rand = Math.random();
         return(Min + Math.floor(Rand * Range));
-    }
+    };
+
+    addNamePool = (name) => {
+        this.namePool.push(name);
+    };
 }
 
 export default nameMobx = new NameMobx();

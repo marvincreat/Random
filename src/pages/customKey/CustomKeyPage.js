@@ -8,6 +8,7 @@ import {
     Text
 } from 'react-native';
 import InputCell from './InputCell';
+
 import route from '../../utils/routerDecorator';
 
 @route('CustomKeyPage')
@@ -36,3 +37,4 @@ export default class CustomKeyPage extends Component{
         );
     }
 }
+
