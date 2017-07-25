@@ -1,13 +1,11 @@
 /**
  * Created by yuanyuan on 17-7-24.
  */
-import NavBar from './NavBar';
+import CustomKeyPage from './CustomKeyPage';
 
 export default {
-    path: '/',
-    component: NavBar,
+    path: 'customKey',
     childRoutes: [
-        Splash,
-        home,
+        CustomKeyPage
     ].map(v => v.routeConfig || v),
 };
