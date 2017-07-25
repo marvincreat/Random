@@ -24,8 +24,8 @@ let minn = width < height ? width : height;
 @route('home')
 export default class Home extends Component {
 
-    static title = '标题';
-    static rightNavTitle = 'fsd';
+    static title = '随机选菜';
+    static rightNavTitle = true;
     static leftNavTitle = '返回';
 
     static contextTypes = {
@@ -37,7 +37,7 @@ export default class Home extends Component {
     }
 
     onRightPressed = () => {
-        this.context.navigator.push('/customKey/CustomKeyPage');
+        this.context.navigator.push({location: '/customKey/CustomKeyPage'});
     };
 
     render() {

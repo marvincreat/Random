@@ -76,6 +76,9 @@ class NameMobx {
     };
 
     startRandomChangeName = () => {
+        if (this.timer){
+            return;
+        }
         this.timer = setInterval(() => {
             let randomNum = this.getRandomNum(0, this.namePool.length);
             this.setName(this.namePool[randomNum]);
@@ -84,6 +87,7 @@ class NameMobx {
 
     endRandomChangeName = () => {
         this.timer && clearInterval(this.timer);
+        this.timer = null;
     };
 
     getRandomNum = (Min,Max) => {
