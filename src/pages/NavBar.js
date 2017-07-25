@@ -49,7 +49,7 @@ const styles = StyleSheet.create({
     paddingHorizontal: 15,
   },
   button: {
-    color: 'white',
+    color: '#333333',
     fontSize: 15,
   },
 });
@@ -108,9 +108,7 @@ export default class NavBar extends Component {
               }
               {
                 right && <TouchableOpacity style={styles.right} onPress={this.onRightPressed}>
-                  <Icon
-                    name={'tint'}
-                    size={25}/>
+                  <Text style={styles.button}>{right}</Text>
                 </TouchableOpacity>
               }
             </View>

@@ -25,8 +25,7 @@ let minn = width < height ? width : height;
 export default class Home extends Component {
 
     static title = '随机选菜';
-    static rightNavTitle = true;
-    static leftNavTitle = '返回';
+    static rightNavTitle = '更多';
 
     static contextTypes = {
         navigator: PropTypes.object,
