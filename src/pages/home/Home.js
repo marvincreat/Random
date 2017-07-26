@@ -15,6 +15,7 @@ import {observer} from 'mobx-react/native';
 import PressButton from '../../components/PressButton';
 import Constants from 'Constants';
 import {setSpText} from '../../utils/fontUtil';
+import Realm from 'realm';
 
 let width = Dimensions.get('window').width;
 let height = Dimensions.get('window').height;
@@ -31,6 +32,18 @@ export default class Home extends Component {
         navigator: PropTypes.object,
     };
 
+    constructor(props){
+        super(props);
+
+        this.realm = new Realm({
+            schema: [{name: 'Dog', properties: {name: 'string'}}]
+        });
+
+        this.realm.write(() => {
+            this.realm.create('Dog', {name: 'Rex'});
+        });
+    }
+
     componentWillUnMount() {
         nameMobx.endRandomChangeName();
     }
@@ -40,6 +53,7 @@ export default class Home extends Component {
     };
 
     render() {
+        console.warn(this.realm.objects('Dog').length);
         return (
             <View style={styles.container}>
                 <View style={styles.textView}>
